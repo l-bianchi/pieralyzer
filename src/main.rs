@@ -1,3 +1,12 @@
+use clap::Parser;
+
+#[derive(Parser)]
+struct Cli {
+    param: String,
+}
+
 fn main() {
-    println!("Hello, world!");
+    let args = Cli::parse();
+
+    println!("pier-{}", args.param);
 }
